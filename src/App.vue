@@ -1,23 +1,14 @@
 <template>
-  <div>{{ text }}</div>
+  <Home></Home>
 </template>
 
 <script>
+import Home from "@/components/Home.vue";
+
 export default {
   name: "App",
-  data() {
-    return {
-      text: "Hello Vue!",
-    };
-  },
-  beforeCreate() {
-    console.log("beforeCreate", this.data, this.$el);
-  },
-  created() {
-    console.log("created", this.data, this.$el);
-  },
-  mounted() {
-    console.log("mounted", this.data, this.$el);
+  components: {
+    Home,
   },
 };
 </script>
