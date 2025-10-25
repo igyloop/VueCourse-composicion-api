@@ -13,12 +13,16 @@ export default {
     lastName: String,
   },
 
-  setup(props) {
+  setup(props, { expose }) {
     const { firstName, lastName } = toRefs(props);
 
     const fullname = computed(() => {
       return `${firstName.value} ${lastName.value}`;
     });
+
+    expose({
+      fullname,
+    })
 
     return {
       fullname,
